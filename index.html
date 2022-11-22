@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>UX API</title>
+  <script src="https://kit.fontawesome.com/6bd8df5489.js"></script>
+</head>
+
+<body>
+  <header>
+    <!-- navigation section -->
+    <nav class="navbar">
+      <div class="navbar_container">
+        <!-- <a href="index.html" id="navbar_logo">Väder</a> -->
+        <div class="navbar_toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar_menu">
+          <li class="navbar_item">
+            <input type="text" class="search_content" placeholder="Sök..." id="search_input">
+          </li>
+          <li class="navbar_item">
+            <a href="index.html" class="navbar_links">Hem</a>
+          </li>
+          <li class="navbar_item">
+            <a href="contact.html" class="navbar_links">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="weather_wrapper">
+        <div class="weather_search">
+          <h1 class="title">Väder</h1>
+        </div>
+        <div class="weather_result">
+          <div id="weather">
+            <div class="weather_item">
+              <div class="weather_img">
+                <img src="/images/14.heavy-snowfall-light.png" alt="weather">
+              </div>
+              <div class="weather_name">
+                <h3>Göteborg</h3>
+                <ul>
+                  <li>Temperatur: 3C</li>
+                  <li>Vind: 2m/s</li>
+                  <li>Luftfuktighet: 85%</li>
+                </ul>
+              </div>
+            </div>
+            <div class="weather_item">
+              <div class="weather_img">
+                <img src="/images/18.heavy-rain-light.png" alt="weather">
+              </div>
+              <div class="weather_name">
+                <h3>Stockholm</h3>
+                <ul>
+                  <li>Temperatur: 3C</li>
+                  <li>Vind: 2m/s</li>
+                  <li>Luftfuktighet: 85%</li>
+                </ul>
+              </div>
+            </div>
+            <div class="weather_item">
+              <div class="weather_img">
+                <img src="/images/01.sun-light.png" alt="weather">
+              </div>
+              <div class=weather_name">
+                <h3>Malmö</h3>
+                <ul>
+                  <li>Temperatur: 3C</li>
+                  <li>Vind: 2m/s</li>
+                  <li>Luftfuktighet: 85%</li>
+                </ul>
+              </div>
+            </div>
+            <div class="weather_item">
+              <div class="weather_img">
+                <img src="/images/21.heavy-wind-light.png" alt="weather">
+              </div>
+              <div class="weather_name">
+                <h3>Jönköping</h3>
+                <ul>
+                  <li>Temperatur: 3C</li>
+                  <li>Vind: 2m/s</li>
+                  <li>Luftfuktighet: 85%</li>
+                </ul>
+              </div>
+            </div>
+            <div class="weather_item">
+              <div class="weather_img">
+                <img src="/images/05.partial-cloudy-light.png" alt="weather">
+              </div>
+              <div class="weather_name">
+                <h3>Linköping</h3>
+                <ul>
+                  <li>Temperatur: 3C</li>
+                  <li>Vind: 2m/s</li>
+                  <li>Luftfuktighet: 85%</li>
+                </ul>
+              </div>
+            </div>
+            <div class="weather_item">
+              <div class="weather_img">
+                <img src="/images/18.heavy-rain-light.png" alt="weather">
+              </div>
+              <div class="weather_name">
+                <h3>Borås</h3>
+                <ul>
+                  <li>Temperatur: -28C</li>
+                  <li>Vind: 2m/s</li>
+                  <li>Luftfuktighet: 85%</li>
+                </ul>
+              </div>
+            </div>
+            <div class="weather_item">
+              <div class="weather_img">
+                <img src="/images/13.thunderstorm-light.png" alt="weather">
+              </div>
+              <div class="weather_name">
+                <h3>Uppsala</h3>
+                <ul>
+                  <li>Temperatur: 3C</li>
+                  <li>Vind: 2m/s</li>
+                  <li>Luftfuktighet: 85%</li>
+                </ul>
+              </div>
+            </div>
+            <div class="weather_item">
+              <div class="weather_img">
+                <img src="/images/11.mostly-cloudy-light.png" alt="weather">
+              </div>
+              <div class="weather_name">
+                <h3>Lund</h3>
+                <ul>
+                  <li>Temperatur: 3C</li>
+                  <li>Vind: 2m/s</li>
+                  <li>Luftfuktighet: 85%</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="weather_container">
+      <button id="getbtn">Get list</button>
+      <ul id="ul_list">
+      </ul>
+      <select name="" id="dropdown_list">
+      </select>
+    </div> -->
+  </main>
+  <footer>
+
+  </footer>
+</body>
+<script src="app.js"></script>
+
+</html>
