@@ -174,11 +174,6 @@ body {
   color: #000;
 }
 
-.second_title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
 .container {
   min-height: 100vh;
 }
@@ -251,12 +246,13 @@ body {
 
 .weather_name {
   padding: 1.5rem 0.5rem;
-  background: var(--clr-secondary);
+  background: #fff;
 }
 
 .weather_name h3 {
   font-size: 1.2rem;
-  color: var(--clr-text);
+  letter-spacing: 1px;
+  color: #000;
   margin-bottom: 1rem;
 }
 

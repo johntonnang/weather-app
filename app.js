@@ -63,7 +63,7 @@ async function get() {
     <div class="weather_name">
       <h3>${array[i].city}</h3>
       <ul>
-        <li>Temperatur: ${array[i].temp}C</li>
+        <li>Temperatur: ${array[i].temp} °C</li>
         <li>Vind: ${array[i].wind}m/s</li>
         <li>Luftfuktighet: ${array[i].humidity}%</li>
       </ul>
