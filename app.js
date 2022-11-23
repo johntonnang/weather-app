@@ -31,15 +31,15 @@ const cityArray = [
 ]
 
 const weather = document.querySelector("#weather")
-const weatherDetailsContent = document.querySelector(".weather_details_content")
-const weatherCloseBtn = document.querySelector("#weather_close_btn")
-const showWeather = document.querySelector(".weather_btn")
+// const weatherDetailsContent = document.querySelector(".weather_details_content")
+// const weatherCloseBtn = document.querySelector("#weather_close_btn")
+// const showWeather = document.querySelector(".weather_btn")
 
-weatherCloseBtn.addEventListener("click", () => {
-  weatherDetailsContent.parentElement.classList.remove("showWeather")
-})
+// weatherCloseBtn.addEventListener("click", () => {
+//   weatherDetailsContent.parentElement.classList.remove("showWeather")
+// })
 
-weather.addEventListener("click", getWeather)
+// weather.addEventListener("click", getWeather)
 
 async function get() {
   let array = []
