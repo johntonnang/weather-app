@@ -434,7 +434,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
   transition: .3s ease-in-out;
-  background-color: #45a049;
+  background: #45a049;
 }
 
 textarea {
