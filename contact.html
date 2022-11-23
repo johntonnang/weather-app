@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>UX API</title>
+    <script src="https://kit.fontawesome.com/6bd8df5489.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- navigation section -->
+        <nav class="navbar">
+            <div class="navbar_container">
+                <!-- <a href="index.html" id="navbar_logo">Väder</a> -->
+                <div class="navbar_toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar_menu">
+                    <li class="navbar_item">
+                        <input type="text" class="search_content" placeholder="Sök..." id="search_input">
+                    </li>
+                    <li class="navbar_item">
+                        <a href="index.html" class="navbar_links">Hem</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="contact.html" class="navbar_links">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="weather_wrapper">
+                <div class="weather_search">
+                    <h1 class="title">Kontaka oss</h1>
+                </div>
+                <p>Du kan alltid ställa en egen fråga. Du kan även rapportera problem och hjälpa oss med förslag och
+                    idéer!</hp>
+                <div class="contact-area">
+                    <form method="POST" action="mailto:weather@gmail.com" enctype="multipart/form-data">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" value="">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" value="">
+                        <label for="name">Message</label>
+                        <textarea type="text" id="name" name="name"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+        <div class="footer-container">
+            <div class="copyright-text">
+                &#169; 2022 UX21, JSU22, FEU22 | Powered by ITHS
+            </div>
+            <div class="link-images-container">
+                <img href="#" class="links-img" src="images/fb-logo.png" alt="">
+                <img href="#" class="links-img" src="images/twi-logo.png" alt="">
+                <img href="#" class="links-img" src="images/link-logo.png" alt="">
+                <img href="#" class="links-img" src="images/insta-logo.png" alt="">
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
