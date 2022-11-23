@@ -399,10 +399,7 @@ body {
   margin-left: 150px;
 }
 
-
-
-/* Kontakt sidan */
-
+/* contact page */
 
 .contact-area {
   width: 80%;
@@ -436,6 +433,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
+  transition: .3s ease-in-out;
   background-color: #45a049;
 }
 
