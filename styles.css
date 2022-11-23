@@ -302,6 +302,10 @@ body {
 
 /* card styling */
 
+.showWeather {
+  display: block;
+}
+
 .weather_title {
   letter-spacing: 1px;
   margin: 1rem;
