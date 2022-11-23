@@ -8,36 +8,66 @@ menu.addEventListener("click", function () {
   menuLinks.classList.toggle("active")
 })
 
-// const searchInput = document.querySelector("#search_input")
-
-// searchInput.addEventListener("click", searchResult)
-
-// function searchResult() {
-//   let searchInputText = document.querySelector("#search_input").value.trim()
-//   fetch(`${searchInputText}`)
-//     .then((response) => response.json())
-//     .then((data) => {})
-// }
-
 const cityArray = [
-  { name: "Stockholm", long: 18.06871, lat: 59.32938 },
-  { name: "Göteborg", long: 11.96679, lat: 57.70716 },
-  { name: "Malmö", long: 13.00073, lat: 55.60587 },
-  { name: "Umeå", long: 20.27056, lat: 63.82833 },
-  { name: "Uppsala", long: 17.638704, lat: 59.849575 },
-  { name: "Lund", long: 13.1971, lat: 55.7074 },
-  { name: "Linköping", long: 15.638, lat: 58.402 },
-  { name: "Karlstad", long: 15.638, lat: 58.402 },
+  {
+    name: "Stockholm",
+    long: 18.06871,
+    lat: 59.32938,
+    region: "Stockholms län",
+  },
+  {
+    name: "Göteborg",
+    long: 11.96679,
+    lat: 57.70716,
+    region: "Västra Götalands län",
+  },
+  { name: "Malmö", long: 13.00073, lat: 55.60587, region: "Skåne län" },
+  { name: "Umeå", long: 20.27056, lat: 63.82833, region: "Västerbottens län" },
+  { name: "Uppsala", long: 17.638704, lat: 59.849575, region: "Uppsala län" },
+  { name: "Lund", long: 13.1971, lat: 55.7074, region: "Skåne län" },
+  { name: "Linköping", long: 15.638, lat: 58.402, region: "Östergötlands län" },
+  { name: "Karlstad", long: 15.638, lat: 58.402, region: " Värmlands län" },
 ]
 
-const weather = document.querySelector("#weather")
-const weatherDetailsContent = document.querySelector(".weather_details_content")
-const weatherCloseBtn = document.querySelector("#weather_close_btn")
-const showWeather = document.querySelector(".weather_btn")
+const weatherText = [
+  "Klart",
+  "Lätt molnighet",
+  "Halvklart",
+  "Molnigt",
+  "Mycket moln",
+  "Mulet",
+  "Dimma",
+  "Lätt regnskur",
+  "Regnskur",
+  "Kraftig regnskur",
+  "Åskskur",
+  "Lätt by av regn och snö",
+  "By av regn och snö",
+  "Kraftig by av regn och snö",
+  "Lätt snöby",
+  "Snöby",
+  "Kraftig snöby",
+  "Lätt regn",
+  "Regn",
+  "Kraftigt regn",
+  "Åska",
+  "Lätt snöblandat regn",
+  "Snöblandat regn",
+  "Kraftigt snöblandat regn",
+  "Lätt snöfall",
+  "Snöfall",
+  "Ymnigt snöfall",
+]
 
-weatherCloseBtn.addEventListener("click", () => {
-  weatherDetailsContent.parentElement.classList.remove("showWeather")
+let today = new Date().toLocaleDateString("sv-GB", {
+  weekday: "short",
+  day: "numeric",
+  month: "long",
 })
+let timeStamp = new Date().getHours() + ":" + new Date().getMinutes()
+
+const weather = document.querySelector("#weather")
+const weatherItem = document.querySelector(".weather_item")
 
 async function get() {
   let array = []
@@ -63,7 +93,7 @@ async function get() {
   }
 
   for (let i = 0; i < array.length; i++) {
-    let text = ` <div class="weather_item">
+    let text = ` <div class="weather_item" id="${array[i].city}">
     <div class="weather_img">
       <img src="/images/${array[i].symb}.svg" alt="weather">
     </div>
@@ -77,6 +107,24 @@ async function get() {
     </div>`
 
     weather.innerHTML += text
+    let joel = document.querySelector("#" + array[i].city)
+    joel.addEventListener("click", () => {
+      let html = `
+      <div class="weather_item" id="${array[i].city}">
+      <div class="weather_img">
+        <img src="/images/${array[i].symb}.svg" alt="weather">
+      </div>
+      <div class="weather_name">
+        <h3>${array[i].city}</h3>
+        <ul>
+          <li>Temperatur: ${array[i].temp} °C</li>
+          <li>Vind: ${array[i].wind}m/s</li>
+          <li>Luftfuktighet: ${array[i].humidity}%</li>
+          </ul>
+      </div>`
+
+      weather.innerHTML += html
+    })
   }
   console.log(array)
 }
