@@ -353,11 +353,11 @@ input[type=text] {
 }
 
 input[type=submit] {
-  width: 30%;
-  background-color: #4CAF50;
+  width: auto;
+  background-color: #000000;
   color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
+  padding: 14px 40px;
+  margin-top: 40px;
   border: none;
   border-radius: 15px;
   cursor: pointer;
