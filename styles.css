@@ -226,12 +226,14 @@ body {
 }
 
 .weather_item {
+  color: black;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 20px 3px rgba(112, 144, 176, 0.3);
   margin: 2rem 0;
   background: #fff;
   border: 1px solid rgba(112, 144, 176, 0.3);
+  cursor: pointer;
 }
 
 .weather_img {
