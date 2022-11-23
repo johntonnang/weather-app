@@ -86,50 +86,50 @@ async function get() {
 
 window.onload = get()
 
-function getWeather(e) {
-  e.preventDefault()
-  if (e.target.classList.contains("weather_btn")) {
-    let cityArray = e.target.parentElement.parentElement
-    for (let i = 0; i < cityArray.length; i++) {
-      fetch(
-        `https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/${cityArray[i].long}/lat/${cityArray[i].lat}/data.json`
-      )
-        .then((response) => response.json())
-        .then((data) => weatherModal(data))
+// function getWeather(e) {
+//   e.preventDefault()
+//   if (e.target.classList.contains("weather_btn")) {
+//     let cityArray = e.target.parentElement.parentElement
+//     for (let i = 0; i < cityArray.length; i++) {
+//       fetch(
+//         `https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/${cityArray[i].long}/lat/${cityArray[i].lat}/data.json`
+//       )
+//         .then((response) => response.json())
+//         .then((data) => weatherModal(data))
 
-      let parameter = result.timeSeries[0].parameters,
-        t = Math.round(parameter.find(({ name }) => name === "t").values[0]),
-        ws = parameter.find(({ name }) => name === "ws").values[0],
-        r = parameter.find(({ name }) => name === "r").values[0],
-        wSymb = parameter.find(({ name }) => name === "Wsymb2").values[0]
+//       let parameter = result.timeSeries[0].parameters,
+//         t = Math.round(parameter.find(({ name }) => name === "t").values[0]),
+//         ws = parameter.find(({ name }) => name === "ws").values[0],
+//         r = parameter.find(({ name }) => name === "r").values[0],
+//         wSymb = parameter.find(({ name }) => name === "Wsymb2").values[0]
 
-      array.push({
-        city: cityArray[i].name,
-        temp: t,
-        wind: ws,
-        humidity: r,
-        symb: wSymb,
-      })
-    }
-  }
-}
+//       array.push({
+//         city: cityArray[i].name,
+//         temp: t,
+//         wind: ws,
+//         humidity: r,
+//         symb: wSymb,
+//       })
+//     }
+//   }
+// }
 
-function weatherModal() {
-  let array = []
-  for (let i = 0; i < cityArray.length; i++) {
-    let text = `
-    <h2 class="weather_title">${array[i].city}</h2>
-    <div class="weather_description">
-    <p>Lorem ipsum</p>
-    </div>
-    <ul>
-    <li>Temperatur: ${array[i].temp} °C</li>
-    <li>Vind: ${array[i].wind}m/s</li>
-    <li>Luftfuktighet: ${array[i].humidity}%</li>
-    </ul>
-    `
+// function weatherModal() {
+//   let array = []
+//   for (let i = 0; i < cityArray.length; i++) {
+//     let text = `
+//     <h2 class="weather_title">${array[i].city}</h2>
+//     <div class="weather_description">
+//     <p>Lorem ipsum</p>
+//     </div>
+//     <ul>
+//     <li>Temperatur: ${array[i].temp} °C</li>
+//     <li>Vind: ${array[i].wind}m/s</li>
+//     <li>Luftfuktighet: ${array[i].humidity}%</li>
+//     </ul>
+//     `
 
-    weatherDetailsContent.innerHTML += text
-    weatherDetailsContent.parentElement.classList.add("showWeather")
-  }
-}
+//     weatherDetailsContent.innerHTML += text
+//     weatherDetailsContent.parentElement.classList.add("showWeather")
+//   }
+// }
