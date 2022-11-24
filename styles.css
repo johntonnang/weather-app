@@ -234,11 +234,11 @@ body {
   background: #fff;
   border: 1px solid rgba(112, 144, 176, 0.3);
   cursor: pointer;
+  transition: .3s ease-in-out;
 }
 
 .weather_item:hover {
   scale: 1.02;
-  transition: .3s ease-in-out;
 }
 
 .weather_img {
