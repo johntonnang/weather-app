@@ -236,6 +236,11 @@ body {
   cursor: pointer;
 }
 
+.weather_item:hover {
+  scale: 1.02;
+  transition: .3s ease-in-out;
+}
+
 .weather_img {
   display: block;
 }
